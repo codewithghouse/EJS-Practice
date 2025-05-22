@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roll dice</title>
+</head>
+<body>
+    <h1>
+        your dice gave the value : <%= dicevalue %>
+    </h1>
+    <% if(dicevalue== 6){ %>
+        <p>nice ! roll dice again </p>
+        <% } %>
+        <%  if (dicevalue == 2){ %>
+            <p> hint make 6 on diec roll so you can get the another dice roll chance</p>
+        <% } %>
+</body>
+</html>
