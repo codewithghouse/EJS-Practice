@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECIPE PAGE</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+     <header>
+    <nav class="nav-bar">
+        <div class=" logo">
+         <h1> EJS MINI PROJECT</h1>
+        </div>
+        <div class="nav-items">
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>MORE+ </li>
+            </ul>
+        </div>
+    </nav>
+ </header>
+ <main>
+    <!-- <h1>“this is recipe page if you were finding @  <%= data.name%> </h1> -->
+     <div class="recipe-content"> 
+        <h1> This is the Recipe Page ! You Were Looking For @ <%=data.name  %></h1>
+        <div class="details">
+            <h1>Time : <%=  data.time %></h1>
+            <h1> Serving : <%= data.servings %></h1>
+        </div>
+         <div class="ingredient">
+            <h1>INGREDIENTS  OF <%= data.name%></h1>
+                <%  for ( ingre of data.ingredients) { %>
+               <ul>
+                  <li> <%= ingre %></li>
+               </ul>
+                <% } %>
+            </div>
+            <div class="steps">
+            <h1>STEPS TO MAKE A BURGER <%= data.name %></h1>
+                <%  for ( step of data.steps) { %>
+               <ul>
+                  <li> <%= step %></li>
+               </ul>
+                <% } %>
+                
+            </div>
+            <div class="image-div">
+        <img src="<%= data.image %>" alt="some image">
+     </div>
+     </div>
+ </main>
+    
+</body>
+</html>
